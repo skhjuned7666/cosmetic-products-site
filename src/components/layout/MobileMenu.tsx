@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { HiXMark } from "react-icons/hi2";
 import HomeLink from "@/components/ui/HomeLink";
-import Logo from "@/components/ui/Logo";
+import { withBasePath } from "@/lib/basePath";
 import { getCategories } from "@/data/products";
 import { CategoryIcon } from "@/lib/categoryIcons";
 
@@ -27,7 +27,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
         <div className='flex items-center justify-between p-5 border-b border-pista/20'>
           <HomeLink onNavigate={onClose} className='inline-flex'>
             <img
-              src='/logo.png'
+              src={withBasePath("/logo.png")}
               alt='logo'
               width={200}
               height={56}

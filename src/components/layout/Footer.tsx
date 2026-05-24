@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import HomeLink from "@/components/ui/HomeLink";
+import { withBasePath } from "@/lib/basePath";
 
 import {
   HiHeart,
@@ -19,7 +20,7 @@ export default function Footer() {
           <div>
             <HomeLink className='inline-block mb-4'>
               <img
-                src='/logo.png'
+                src={withBasePath("/logo.png")}
                 alt='logo'
                 width={200}
                 height={56}

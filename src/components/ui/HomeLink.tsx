@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { scrollToHero } from "@/lib/scrollToHero";
+import { withBasePath } from "@/lib/basePath";
 
 interface HomeLinkProps {
   href?: string;
@@ -26,7 +27,7 @@ export default function HomeLink({
     if (pathname === "/") {
       e.preventDefault();
       scrollToHero();
-      window.history.replaceState(null, "", "/#hero");
+      window.history.replaceState(null, "", withBasePath("/#hero"));
     }
   };
 

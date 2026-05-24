@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HomeLink from "@/components/ui/HomeLink";
-import Logo from "@/components/ui/Logo";
+import { withBasePath } from "@/lib/basePath";
 import {
   HiMagnifyingGlass,
   HiShoppingBag,
@@ -70,7 +70,7 @@ export default function Header() {
 
             <HomeLink className='flex items-center shrink-0'>
               <img
-                src='/logo.png'
+                src={withBasePath("/logo.png")}
                 alt='logo'
                 width={200}
                 height={100}
