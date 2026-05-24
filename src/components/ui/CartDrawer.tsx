@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+import AppImage from "@/components/ui/AppImage";
 import { HiXMark, HiPlus, HiMinus, HiTrash, HiShoppingBag } from "react-icons/hi2";
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/utils";
@@ -98,7 +98,7 @@ export default function CartDrawer() {
                   className="flex gap-4 p-3 rounded-2xl bg-cream/50"
                 >
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0">
-                    <Image
+                    <AppImage
                       src={product.image}
                       alt={product.name}
                       fill

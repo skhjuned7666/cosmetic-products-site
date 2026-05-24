@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/components/ui/AppImage";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { CategoryInfo } from "@/types/product";
 import { CategoryIcon } from "@/lib/categoryIcons";
@@ -17,7 +17,7 @@ export default function CategoryCard({ category }: CategoryCardProps) {
       className="group relative block aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden border border-pista/10 hover:border-pista/30 hover:shadow-xl hover:shadow-pista/15 transition-all duration-300"
     >
       {category.coverImage ? (
-        <Image
+        <AppImage
           src={category.coverImage}
           alt={category.name}
           fill

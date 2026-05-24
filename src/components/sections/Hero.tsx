@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/components/ui/AppImage";
 import { HiArrowRight, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import gsap from "gsap";
 import { heroBanners } from "@/data/heroBanners";
@@ -169,7 +169,7 @@ export default function Hero() {
               className="relative h-full shrink-0 overflow-hidden"
               style={{ width: `${100 / total}%` }}
             >
-              <Image
+              <AppImage
                 src={banner.image}
                 alt={`${banner.title} — ${banner.highlight}`}
                 fill

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/components/ui/AppImage";
 import { HiArrowRight } from "react-icons/hi2";
 import { getCategories, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
@@ -96,7 +96,7 @@ function VarietyBlock({
         >
           <div className={`relative ${reverse ? "lg:[direction:ltr]" : ""}`}>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-              <Image
+              <AppImage
                 src={image}
                 alt={title}
                 fill

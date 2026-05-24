@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
+import AppImage from "@/components/ui/AppImage";
 import { HiStar, HiShoppingBag, HiHeart } from "react-icons/hi2";
 import { Product } from "@/types/product";
 import { useCart } from "@/context/CartContext";
@@ -48,7 +48,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       style={{ animationDelay: `${index * 0.05}s` }}
     >
       <div className="relative aspect-square overflow-hidden bg-cream">
-        <Image
+        <AppImage
           src={product.image}
           alt={product.name}
           fill
